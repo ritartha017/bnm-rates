@@ -56,7 +56,7 @@ class BnmRates
           rate: value / nominal.to_f
         }
       rates[valute[:char_code].to_sym] = valute
-      rates[:MDL] = { char_code: 'MDL', name: 'Moldovian Leu', value: 1, rate: 1}
+      rates[:MDL] = { char_code: "MDL", name: "Moldovian Leu", value: 1, rate: 1 }
     end
     rates
   end

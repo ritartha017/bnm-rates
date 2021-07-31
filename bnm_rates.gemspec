@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = "Write a longer description or delete this line."
   spec.homepage      = "https://github.com/ritartha017"
   spec.license       = "MIT"
-  spec.required_ruby_version = ">= 2.4.0"
+  spec.required_ruby_version = ">= 2.5.0"
 
   spec.metadata["source_code_uri"] = spec.homepage
 
@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html
-  spec.add_dependency 'rest-client', '~> 2'
-  spec.add_dependency 'nokogiri', '~> 1.11.7'
-  spec.add_dependency 'money', '~> 6.16.0'
+  spec.add_dependency "money", "~> 6.16.0"
+  spec.add_dependency "nokogiri", "~> 1.11.7"
+  spec.add_dependency "rest-client", "~> 2"
 end
