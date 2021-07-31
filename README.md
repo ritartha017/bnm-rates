@@ -26,7 +26,7 @@ char_codes = bnm.char_codes #=>[:EUR, :MDL, :USD, .......]
 ```
 By default 
 ```ruby 
-date = Time.now.strftime("%d.%m.%Y")```, ```lang = :en
+date = Time.now.strftime("%d.%m.%Y"), lang = :en
 ```
 
 Get hashed information about certain valute, use:
