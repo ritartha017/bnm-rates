@@ -1,4 +1,4 @@
-# BnmRates
+# BnmRates[![CI](https://github.com/ritartha017/bnm-rates/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/ritartha017/bnm-rates/actions/workflows/main.yml)
 
 Gem for get exchange rates from BNM.md
 
