@@ -20,19 +20,25 @@ Or install it yourself as:
 
 ## Usage
 To return char_codes array
-```bnm = BnmRates.new(date: :'12.12.2012', lang: :en)
+```ruby
+bnm = BnmRates.new(date: :'12.12.2012', lang: :en)
 char_codes = bnm.char_codes #=>[:EUR, :MDL, :USD, .......]
 ```
-By default ```date = Time.now.strftime("%d.%m.%Y")```, ```lang = :en```
+By default 
+```ruby 
+date = Time.now.strftime("%d.%m.%Y")```, ```lang = :en```
 
 Get hashed information about certain valute, use:
 ```valute = BnmRates.new.USD  #=> {:id=>44, :num_code=>"840", :char_code=>"USD", :nominal=>1, :name=>"US Dollar", :value=>17.9234, :rate=>17.9234} 
 ```
 
 Use keys for valute instance to get needed info:
-```valute = BnmRates.new.USD[:rate]```
+```ruby
+valute = BnmRates.new.USD[:rate]```
 
-Disponible keys: ```:num_code```,```:char_code```, ```:nominal```, ```:name```, ```:value```, ```:rate```.
+Disponible keys: 
+```ruby
+:num_code```,```:char_code```, ```:nominal```, ```:name```, ```:value```, ```:rate```.
 
 ## Development
 
