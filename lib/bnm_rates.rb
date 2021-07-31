@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
-require_relative "bnm_rates/version"
-
 require "nokogiri"
 require "rest-client"
 require "money"
+require_relative "bnm_rates/version"
 
 Money.locale_backend = :currency
 
@@ -44,17 +43,13 @@ class BnmRates
     xml_doc.css("Valute").map do |node|
       nominal = node.css("Nominal").text.to_i
       value = node.css("Value").text.to_f
-
-      valute =
-        {
-          id: node.get_attribute("ID").to_i,
-          num_code: node.css("NumCode").text,
-          char_code: node.css("CharCode").text,
-          nominal: nominal,
-          name: node.css("Name").text,
-          value: value,
-          rate: value / nominal.to_f
-        }
+      valute = { id: node.get_attribute("ID").to_i,
+                 num_code: node.css("NumCode").text,
+                 char_code: node.css("CharCode").text,
+                 nominal: nominal,
+                 name: node.css("Name").text,
+                 value: value,
+                 rate: value / nominal.to_f }
       rates[valute[:char_code].to_sym] = valute
       rates[:MDL] = { char_code: "MDL", name: "Moldovian Leu", value: 1, rate: 1 }
     end
