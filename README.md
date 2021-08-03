@@ -23,7 +23,7 @@ Or install it yourself as:
 To return char_codes array
 ```ruby
 bnm = BnmRates.new(date: :'12.12.2012', lang: :en)
-char_codes = bnm.char_codes #=>[:EUR, :MDL, :USD, .......]
+char_codes = bnm.char_codes #=>[:EUR, :MDL, :USD, :RUB, :RON, :UAH, :AED, :ALL, :AMD, :AUD, :AZN, :BGN, :BYN, :CAD, :CHF, :CNY, :CZK, :DKK, :GBP, ...]
 ```
 By default 
 ```ruby 
@@ -37,7 +37,9 @@ valute = BnmRates.new.USD  #=> {:id=>44, :num_code=>"840", :char_code=>"USD", :n
 
 Use keys for valute instance to get needed info:
 ```ruby
-valute = BnmRates.new.USD[:rate]
+valute = BnmRates.new.USD[:rate] #=> 17.8869 
+
+valute = BnmRates.new.PLN[:name] #=> "Polish Zloty"
 ```
 
 Disponible keys: 
